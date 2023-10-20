@@ -19,8 +19,7 @@ export default function Header() {
                 <div className='w-8 h-8 rounded-[2rem]'>
                     <img src={account} className='h-full w-full rounded-[2rem]' alt="" />
                 </div>
-            </div>
-            
+            </div>      
         </header>
     );
 }

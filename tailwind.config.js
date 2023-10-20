@@ -2,24 +2,39 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{html,js,jsx}"
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    colors: {
-      'header': '#373B53',
-      'logobg': '#7C5DFA',
-      'headerborder': '#494E6E'
-
-    },
     extend: {
+      colors: {
+        'header': '#373B53',
+        'logobg': '#7C5DFA',
+        'headerborder': '#494E6E',
+        'spancolor': '#888EB0',
+        'paid': '#33D69F',
+        'pagebg': '#F8F8FB'
+      },
       height: {
         '41': '61.06px',
         '17': '72px'
       },
       width: {
-        '17': '72px'
-      } 
+        '17': '72px',
+        'mobilecontainer': '327px',
+        '21': '90px'
+      },
+      fontSize: {
+        'span': '13px',
+        's': '15px'
+      },
+      lineHeight: {
+        '3.5': '15px'
+      },
+      gridTemplateColumns: {
+        'content': ''
+      }
     },
+    
   },
   plugins: [],
 }
