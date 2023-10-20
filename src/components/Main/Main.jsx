@@ -1,7 +1,7 @@
 
 export default function Main() {
     return(
-        <main className="w-mobilecontainer mx-auto">
+        <main className="s:w-mobilecontainer md:w-tablet mx-auto">
             <div className="flex justify-between mb-8">
                 <div>
                     <h1 className="text-2xl leading-5 font-bold">Invoices</h1>
@@ -18,17 +18,17 @@ export default function Main() {
                     </button>
                 </div>
             </div>
-            <div className="grid gap-4">
-                <div className="w-mobilecontainer px-6 py-7">
+            <div className="grid gap-4 ">
+                <div className="px-6 py-7 bg-[#fff] rounded-lg box-card md:flex md:gap-21 md:items-center md:justify-between">
                     <div className="flex justify-between">
-                        <div>
-                            <h1 className="mb-6 font-bold text-s leading-3.5"><span className="text-[#7E88C3]">#</span>RT3080</h1>
-                            <span className="text-span leading-3.5 text-spancolor">Due 19 Aug 2021</span>
+                        <div className="md:flex md:gap-7">
+                            <h1 className="mb-6 font-bold text-s leading-3.5 md:mb-0"><span className="text-[#7E88C3]">#</span>RT3080</h1>
+                            <span className="text-span leading-3.5 text-spancolor md:mr-13">Due 19 Aug 2021</span>
                         </div>
                         <h3 className="text-span leading-3.5 text-spancolor">Jensen Huang</h3>
                     </div>
-                    <div className="flex justify-between">
-                        <h1 className="pt-3 text-s font-bold">£ 1,800.90</h1>
+                    <div className="flex justify-between md:gap-10">
+                        <h1 className="pt-4 text-s font-bold md:py-0 md:flex md:items-center">£ 1,800.90</h1>
                         <div className="w-[6.5rem] h-10 bg-[#33d6a02f] rounded-md flex items-center justify-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                 <circle cx="4" cy="4" r="4" fill="#33D69F"/>
@@ -37,16 +37,16 @@ export default function Main() {
                         </div>
                     </div>
                 </div>
-                <div className="w-mobilecontainer px-6 py-7">
+                <div className="px-6 py-7 bg-[#fff] rounded-lg box-card md:flex md:gap-21 md:items-center md:justify-between">
                     <div className="flex justify-between">
-                        <div>
-                            <h1 className="mb-6 font-bold text-s leading-3.5"><span className="text-[#7E88C3]">#</span>RT3080</h1>
-                            <span className="text-span leading-3.5 text-spancolor">Due 19 Aug 2021</span>
+                        <div className="md:flex md:gap-7">
+                            <h1 className="mb-6 font-bold text-s leading-3.5 md:mb-0"><span className="text-[#7E88C3]">#</span>RT3080</h1>
+                            <span className="text-span leading-3.5 text-spancolor md:mr-13">Due 19 Aug 2021</span>
                         </div>
                         <h3 className="text-span leading-3.5 text-spancolor">Jensen Huang</h3>
                     </div>
-                    <div className="flex justify-between">
-                        <h1 className="pt-3 text-s font-bold">£ 1,800.90</h1>
+                    <div className="flex justify-between md:gap-10">
+                        <h1 className="pt-4 text-s font-bold md:py-0 md:flex md:items-center">£ 1,800.90</h1>
                         <div className="w-[6.5rem] h-10 bg-[#33d6a02f] rounded-md flex items-center justify-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                 <circle cx="4" cy="4" r="4" fill="#33D69F"/>
@@ -55,6 +55,25 @@ export default function Main() {
                         </div>
                     </div>
                 </div>
+                <div className="px-6 py-7 bg-[#fff] rounded-lg box-card md:flex md:gap-21 md:items-center md:justify-between">
+                    <div className="flex justify-between">
+                        <div className="md:flex md:gap-7">
+                            <h1 className="mb-6 font-bold text-s leading-3.5 md:mb-0"><span className="text-[#7E88C3]">#</span>RT3080</h1>
+                            <span className="text-span leading-3.5 text-spancolor md:mr-13">Due 19 Aug 2021</span>
+                        </div>
+                        <h3 className="text-span leading-3.5 text-spancolor">Jensen Huang</h3>
+                    </div>
+                    <div className="flex justify-between md:gap-10">
+                        <h1 className="pt-4 text-s font-bold md:py-0 md:flex md:items-center">£ 1,800.90</h1>
+                        <div className="w-[6.5rem] h-10 bg-[#33d6a02f] rounded-md flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                <circle cx="4" cy="4" r="4" fill="#33D69F"/>
+                            </svg>
+                            <h3 className="text-s font-bold text-paid">Paid</h3>
+                        </div>
+                    </div>
+                </div>
+               
             </div>
         </main>
     );

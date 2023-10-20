@@ -20,7 +20,8 @@ export default {
       },
       width: {
         '17': '72px',
-        'mobilecontainer': '327px',
+        'mobilecontainer': '375px',
+        'tablet': '768px',
         '21': '90px'
       },
       fontSize: {
@@ -31,7 +32,19 @@ export default {
         '3.5': '15px'
       },
       gridTemplateColumns: {
-        'content': ''
+        'content': 'repeat(auto-fit, minmax(327px, 672px)'
+      },
+      boxShadow: {
+        'card': '0px 10px 10px -10px rgba(72, 84, 159, 0.10);'
+      },
+      gap: {
+        '21': '82px'
+      },
+      screens: {
+        's': '375px'
+      },
+      margin: {
+        '13': '51px'
       }
     },
     
