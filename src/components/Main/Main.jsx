@@ -1,7 +1,7 @@
 
 export default function Main() {
     return(
-        <main className="s:w-mobilecontainer md:w-tablet mx-auto">
+        <main className="s:w-mobilecontainer md:w-tablet mx-auto pt-[78px]">
             <div className="flex justify-between mb-8">
                 <div>
                     <h1 className="text-2xl leading-5 font-bold">Invoices</h1>
