@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-    background-color: #F8F8FB;
+ background-color: #F8F8FB;
 }
 
+.open {
+    left: 72px;
+}
 
+.off {
+    left:-100px;
+}

@@ -22,7 +22,8 @@ export default {
         '17': '72px',
         'mobilecontainer': '375px',
         'tablet': '768px',
-        '21': '90px'
+        '21': '90px',
+        'invoice': '619px',
       },
       fontSize: {
         'span': '13px',
@@ -45,7 +46,11 @@ export default {
       },
       margin: {
         '13': '51px'
+      },
+      padding: {
+        '15': '59px'
       }
+
     },
     
   },
