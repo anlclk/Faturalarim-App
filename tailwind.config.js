@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
+  darkMode:'class',
   theme: {
     extend: {
       colors: {
@@ -23,7 +24,7 @@ export default {
         'mobilecontainer': '375px',
         'tablet': '768px',
         '21': '90px',
-        'invoice': '619px',
+        'invoice': '617px',
       },
       fontSize: {
         'span': '13px',
