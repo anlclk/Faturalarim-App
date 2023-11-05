@@ -43,7 +43,7 @@ export default {
         '21': '82px'
       },
       screens: {
-        's': '375px'
+        'max-s': '600px'
       },
       margin: {
         '13': '51px'
