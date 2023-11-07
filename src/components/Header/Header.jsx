@@ -26,7 +26,7 @@ export default function Header() {
             <div className="h-full flex gap-44 border-r-1 border-white-500 md:h-17">
             <button onClick={() => { setIsOpen(!IsOpen) }} className="h-full w-17 flex items-center justify-center bg-logobg rounded-r-xl">
                 <svg width="24" height="24" viewBox="0 0 65 62" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9714 0.000188009L32.5 31.0574L48.0286 0.00018819C58.1393 5.50976 65 16.2324 65 28.5574C65 46.5066 50.4493 61.0574 32.5 61.0574C14.5507 61.0574 0 46.5066 0 28.5574C0 16.2324 6.86068 5.50976 16.9714 0.000188009Z" fill="#fff"/>
+                    <path fillRule="evenodd" clipRule="evenodd" d="M16.9714 0.000188009L32.5 31.0574L48.0286 0.00018819C58.1393 5.50976 65 16.2324 65 28.5574C65 46.5066 50.4493 61.0574 32.5 61.0574C14.5507 61.0574 0 46.5066 0 28.5574C0 16.2324 6.86068 5.50976 16.9714 0.000188009Z" fill="#fff"/>
                 </svg>
             </button>
             </div>
