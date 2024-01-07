@@ -6,10 +6,7 @@
     background-color: #F8F8FB;
 }
 
-.open {
-    left: 72px;
-}
-
-.off {
-    left:-100px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
 }
