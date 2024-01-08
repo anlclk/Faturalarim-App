@@ -1,20 +1,26 @@
 import Invoice from "../AddInvoice/Invoice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Resultform from "../Resultform/Resultform";
 
-export default function Main({ isOpen }) {
+export default function Home({ isOpen }) {
     const [data, setData] = useState([]);
 
     function appendData(newEntry) {
-        setData([...data, newEntry]);
+        const newData = [...data, newEntry]
+        setData(newData);
+        localStorage.data = JSON.stringify(newData);
     }
+    useEffect(() => {
+        if(localStorage.data) {
+            setData(JSON.parse(localStorage.data));
+        }
+
+    }, []);
 
     return(
         <>
         {isOpen === true ? <Invoice appendData={appendData} /> : ''}
-
-        <main className="s:w-mobilecontainer md:w-tablet mx-auto md:pt-[78px] pt-[36px] dark:bg-[#000] h-full">
-            <div className="flex justify-between mb-8">
+            <div className="flex justify-between mb-8 phone:w-[327px] tablet:w-[672px] desktop:w-[730px] mx-auto">
                 <div>
                     <h1 className="text-2xl leading-5 font-bold dark:text-[#fff]">Faturalar</h1>
                     <span className="text-span leading-3.5 text-spancolor">? Faturalar</span>
@@ -33,11 +39,7 @@ export default function Main({ isOpen }) {
                     </button>
                 </div>
             </div>
-            <div className="">
-                <Resultform data={data} />
-            </div>
-        </main>
-
+            <Resultform data={data} />
         </>
     );
 }

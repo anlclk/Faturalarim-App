@@ -4,11 +4,11 @@ function ResultFormItem({ bill, billDate, paymentMethod, amount, billStatus }) {
 
     return(
         <>
-            <div className="px-6 py-7 bg-[#fff] rounded-lg box-card md:flex md:gap-21 md:items-center md:justify-between dark:bg-[#1E2139]">
+            <div className="px-6 py-7 bg-[#fff] phone:w-[327px] tablet:w-[672px] desktop:w-[730px] mx-auto rounded-lg mb-4 box-card md:flex md:gap-21 md:items-center md:justify-between dark:bg-[#1E2139]">
                 <div className="flex justify-between">
-                    <div className="md:flex md:gap-7">
-                        <h1 className="mb-6 font-bold text-s leading-3.5 md:mb-0 dark:text-[#fff]">{bill}</h1>
-                        <span className="text-span leading-3.5 text-spancolor md:mr-13">{billDate}</span>
+                    <div className="md:flex md:gap-7 w-[220px]">
+                        <h1 className="mb-6 font-bold text-s leading-3.5 md:mb-0 dark:text-[#fff] w-[50%]">{bill}</h1>
+                        <span className="text-span leading-3.5 text-spancolor md:mr-10 w-[50%]">{billDate}</span>
                     </div>
                     <h3 className="text-span leading-3.5 text-spancolor dark:text-[#fff]">{paymentMethod}</h3>
                 </div> 
@@ -28,16 +28,14 @@ function ResultFormItem({ bill, billDate, paymentMethod, amount, billStatus }) {
 
 export default function ResultForm({ data }) {
     return(
-        <div className="grid grid-cols-1 gap-4">
-            {data.map((x, i) => <ResultFormItem
+            data.map((x, i) => <ResultFormItem
                 key={i}
                 bill={x.bill}
                 billDate={x.billDate}
                 paymentMethod={x.paymentMethod}
                 amount={x.amount} 
                 billStatus={x.billStatus}
-            />)}
-        </div>
+            />)
     );
 }
 

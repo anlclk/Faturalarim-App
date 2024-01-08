@@ -43,7 +43,9 @@ export default {
         '21': '82px'
       },
       screens: {
-        'max-s': '600px'
+        'phone': '375px',
+        'tablet': '640px',
+        'desktop': '1280px'
       },
       margin: {
         '13': '51px'

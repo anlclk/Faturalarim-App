@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "../components/Header/Header";
-import Main from "../components/Main/Main";
+import Home from "../components/Home/Home";
 
 
 export default function MainLayout() {
@@ -8,7 +8,9 @@ export default function MainLayout() {
     return(
         <>
             <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-            <Main isOpen={isOpen} />
+            <main className="pt-16">
+                <Home isOpen={isOpen} />
+            </main>
         </>
     );
 }
