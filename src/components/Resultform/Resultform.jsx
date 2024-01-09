@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 
-function ResultFormItem({ bill, billDate, paymentMethod, amount, billStatus }) {
+function ResultFormItem({ index, bill, billDate, paymentMethod, amount, billStatus }) {
     const formattedAmount = Number(amount).toLocaleString("tr-TR", { style: "currency", currency: "TRY" });
 
     return(
         <>
-            <div className="px-6 py-7 bg-[#fff] phone:w-[327px] tablet:w-[672px] desktop:w-[730px] mx-auto rounded-lg mb-4 box-card md:flex md:gap-21 md:items-center md:justify-between dark:bg-[#1E2139]">
+            <Link to={`/faturalarim/${index}`} className="px-6 py-7 bg-[#fff] phone:w-[327px] tablet:w-[672px] desktop:w-[730px] mx-auto rounded-lg mb-4 box-card md:flex md:gap-21 md:items-center md:justify-between dark:bg-[#1E2139]">
                 <div className="flex justify-between">
                     <div className="md:flex md:gap-7 w-[220px]">
                         <h1 className="mb-6 font-bold text-s leading-3.5 md:mb-0 dark:text-[#fff] w-[50%]">{bill}</h1>
@@ -21,7 +22,7 @@ function ResultFormItem({ bill, billDate, paymentMethod, amount, billStatus }) {
                         <h3 className="text-s font-bold text-paid">{billStatus}</h3>
                     </div>
                 </div>
-            </div>
+            </Link>
         </>
     );
 }
@@ -30,6 +31,7 @@ export default function ResultForm({ data }) {
     return(
             data.map((x, i) => <ResultFormItem
                 key={i}
+                index={i}
                 bill={x.bill}
                 billDate={x.billDate}
                 paymentMethod={x.paymentMethod}
