@@ -13,7 +13,15 @@ export default {
         'headerborder': '#494E6E',
         'spancolor': '#888EB0',
         'paid': '#33D69F',
-        'pagebg': '#F8F8FB'
+        'pagebg': '#F8F8FB',
+        'pending': '#FF8F00',
+        'edit': '#F9FAFE',
+        'textedit': '#7E88C3',
+        'delete': '#EC5757',
+        'date': '#0C0E16'
+      },
+      opacity: {
+        'qpending': '0.0571'
       },
       height: {
         '41': '61.06px',
@@ -52,6 +60,12 @@ export default {
       },
       padding: {
         '15': '59px'
+      },
+      boxShadow: {
+        '4xl': '0px 10px 10px -10px rgba(72, 84, 159, 0.10)'
+      },
+      borderRadius: {
+        'xl': '24px'
       }
 
     },
