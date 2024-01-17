@@ -5,11 +5,12 @@ import { Outlet } from "react-router-dom";
 
 export default function MainLayout() {
     const [isOpen, setIsOpen] = useState(false);
+    console.log(isOpen);
     return(
         <>
             <Header isOpen={isOpen} setIsOpen={setIsOpen} />
             <main className="pt-16">
-                <Outlet isOpen={isOpen} />
+                <Outlet context={[ isOpen, setIsOpen ]} />
             </main>
         </>
     );

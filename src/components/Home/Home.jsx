@@ -1,11 +1,14 @@
 import Invoice from "../AddInvoice/Invoice";
 import { useEffect, useState } from "react";
 import Resultform from "../Resultform/Resultform";
-import { Popover } from '@headlessui/react'
+import { Popover } from '@headlessui/react';
+import { useOutletContext } from "react-router-dom";
 
 
-export default function Home({ isOpen }) {
+export default function Home() {
     const [data, setData] = useState([]);
+    const [isOpen, setIsOpen] = useOutletContext();
+    console.log(isOpen);
 
     function appendData(newEntry) {
         const newData = [...data, newEntry]
@@ -21,7 +24,7 @@ export default function Home({ isOpen }) {
 
     return(
         <>
-        {isOpen === true ? <Invoice appendData={appendData} /> : ''}
+            {isOpen === true ? <Invoice appendData={appendData} /> : ''}
             <div className="flex justify-between mb-8 phone:w-[327px] tablet:w-[672px] desktop:w-[730px] mx-auto">
                 <div>
                     <h1 className="text-2xl leading-5 font-bold dark:text-[#fff]">Faturalar</h1>
@@ -29,7 +32,7 @@ export default function Home({ isOpen }) {
                 </div>
                 <div className="flex items-center gap-3.5">
                     <Popover className="relative">
-                        <Popover.Button className="flex items-center gap-2 justify-center px-1 text-[#000] dark: text-white">
+                        <Popover.Button className="flex items-center gap-2 justify-center px-1 text-[#000] dark:text-white">
                         Statüye Göre Filtrele
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none">
                             <path d="M1 1L5.2279 5.2279L9.4558 1" stroke="#7C5DFA" strokeWidth="2"/>
@@ -43,7 +46,6 @@ export default function Home({ isOpen }) {
                             </div>
                         </Popover.Panel>
                     </Popover>
-                    
                     <button className="w-21 h-11 flex items-center gap-2 bg-logobg rounded-3xl pl-1.5">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                             <circle cx="16" cy="16" r="16" fill="white"/>

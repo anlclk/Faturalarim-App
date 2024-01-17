@@ -2,7 +2,7 @@ import { useState } from 'react';
 import account from '../Account/account.jpg';
 
 
-export default function Header({ setIsOpen }) {
+export default function Header({ setIsOpen, isOpen}) {
     
     const [theme, Settheme] = useState("light");
 
