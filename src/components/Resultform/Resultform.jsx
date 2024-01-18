@@ -15,32 +15,31 @@ function ResultFormItem({ index, bill, billDate, paymentMethod, amount, billStat
                 </div> 
                 <div className="flex justify-between md:gap-10">
                     <h1 className="pt-4 text-s font-bold md:py-0 md:flex md:items-center dark:text-[#fff]">{formattedAmount}</h1>
-                    <div className="w-[6.5rem] h-10 bg-[#33d6a02f] rounded-md flex items-center justify-center gap-2">
                         {billStatus === 'Ödendi' && (
-                            <>
+                            <div className="w-[6.5rem] h-10 bg-[#33d6a02f] rounded-md flex items-center justify-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                     <circle cx="4" cy="4" r="4" fill="#33D69F"/>
                                 </svg>
                                 <h3 className="text-s font-bold text-paid">{billStatus}</h3>
-                            </>
+                            </div>             
                         )}
                         {billStatus === 'Ödenmedi' && (
-                            <>
+                            <div className="w-[6.5rem] h-10 bg-pending/qpending rounded-md flex items-center justify-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-                                    <circle cx="4" cy="4" r="4" fill="#33D69F"/>
+                                    <circle cx="4" cy="4" r="4" fill="#FF8F00"/>
                                 </svg>
-                                <h3 className="text-s font-bold text-paid">{billStatus}</h3>
-                            </>
+                                <h3 className="text-s font-bold text-pending">{billStatus}</h3>
+                            </div>             
                         )}
                         {billStatus === 'Taslak' && (
-                            <>
+                            <div className="w-[6.5rem] h-10 bg-draft/qpending rounded-md flex items-center justify-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-                                    <circle cx="4" cy="4" r="4" fill="#33D69F"/>
+                                    <circle cx="4" cy="4" r="4" fill="#373B53"/>
                                 </svg>
-                                <h3 className="text-s font-bold text-paid">{billStatus}</h3>
-                            </>
+                                <h3 className="text-s font-bold text-draft">{billStatus}</h3>
+                            </div>             
                         )}
-                    </div>
+            
                 </div>
             </Link>
         </>

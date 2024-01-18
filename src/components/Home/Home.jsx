@@ -8,13 +8,15 @@ import { useOutletContext } from "react-router-dom";
 export default function Home() {
     const [data, setData] = useState([]);
     const [isOpen, setIsOpen] = useOutletContext();
-    console.log(isOpen);
+    const invoices = data.length;
+
 
     function appendData(newEntry) {
         const newData = [...data, newEntry]
         setData(newData);
         localStorage.data = JSON.stringify(newData);
     }
+    
     useEffect(() => {
         if(localStorage.data) {
             setData(JSON.parse(localStorage.data));
@@ -28,12 +30,12 @@ export default function Home() {
             <div className="flex justify-between mb-8 phone:w-[327px] tablet:w-[672px] desktop:w-[730px] mx-auto">
                 <div>
                     <h1 className="text-2xl leading-5 font-bold dark:text-[#fff]">Faturalar</h1>
-                    <span className="text-span leading-3.5 text-spancolor">? Faturalar</span>
+                    <span className="text-span leading-3.5 text-spancolor">{invoices} Adet Fatura</span>
                 </div>
                 <div className="flex items-center gap-3.5">
-                    <Popover className="relative">
-                        <Popover.Button className="flex items-center gap-2 justify-center px-1 text-[#000] dark:text-white">
-                        Statüye Göre Filtrele
+                    <Popover className="relative z-0">
+                        <Popover.Button className="flex items-center z-0 gap-2 justify-center px-1 text-[#000] dark:text-white">
+                        <h4>Statüye göre filtrele</h4>
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none">
                             <path d="M1 1L5.2279 5.2279L9.4558 1" stroke="#7C5DFA" strokeWidth="2"/>
                         </svg>

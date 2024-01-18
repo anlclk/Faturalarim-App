@@ -23,7 +23,7 @@ export default function Header({ setIsOpen, isOpen}) {
     }
     return(
        <>
-        <header className="sticky top-0 h-17 w-full flex z-10 justify-between bg-header mb-9 md:w-17 md:h-full md:mb-0 md:flex-col md:fixed md:content-between md:rounded-r-xl dark:bg-[#1E2139]">
+        <header className="sticky top-0 h-17 w-full flex z-50 justify-between bg-header mb-9 md:w-17 md:h-full md:mb-0 md:flex-col md:fixed md:content-between md:rounded-r-xl dark:bg-[#1E2139]">
             <div className="h-full flex gap-44 border-r-1 border-white-500 md:h-17">
             <button onClick={handleClick} className="h-full w-17 flex items-center justify-center bg-logobg rounded-r-xl">
                 <svg width="24" height="24" viewBox="0 0 65 62" xmlns="http://www.w3.org/2000/svg">

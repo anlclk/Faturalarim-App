@@ -18,7 +18,8 @@ export default {
         'edit': '#F9FAFE',
         'textedit': '#7E88C3',
         'delete': '#EC5757',
-        'date': '#0C0E16'
+        'date': '#0C0E16',
+        'draft': '#373B53'
       },
       opacity: {
         'qpending': '0.0571'
